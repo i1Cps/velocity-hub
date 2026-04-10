@@ -2,7 +2,7 @@
   <h1>Velocity Hub</h1>
 </div>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 <div align="center">
   <a href="https://velocity-hub.tech/" target="_blank">
@@ -16,7 +16,7 @@
   </a>
 </div>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 <p align="center"><strong>Velocity Hub</strong> is a small collection of reinforcement learning environments designed to train bipeds and quadrupeds to follow velocity commands</p>
 
@@ -31,7 +31,7 @@
 </table>
 </div>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 <h2 align="center">Supported Robots</h2>
 
@@ -51,7 +51,7 @@
 
 <!-- TODO: Add individual robot images/gifs here -->
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 ## ⚡ Quickstart
 
@@ -86,7 +86,7 @@ uv run play Mjlab-Velocity-Flat-Booster-T1 --wandb-run-path <user>/<project>/<ru
 uv run play Mjlab-Velocity-Flat-Booster-T1 --checkpoint-file logs/rsl_rl/booster_t1_velocity/model.pt
 ```
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 ## Dependencies
 
@@ -94,7 +94,7 @@ uv run play Mjlab-Velocity-Flat-Booster-T1 --checkpoint-file logs/rsl_rl/booster
 [![JAX Badge](https://custom-icon-badges.demolab.com/badge/JAX-black?style=for-the-badge&logo=JAX&logoColor=white)](https://docs.jax.dev/en/latest/quickstart.html)
 [![Nvidia Badge](https://img.shields.io/badge/NVIDIA-76B900?logo=nvidia&logoColor=fff&style=for-the-badge)](https://www.nvidia.com/en-gb/geforce/drivers/)
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 ## Credits
 
