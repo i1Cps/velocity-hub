@@ -55,7 +55,6 @@
 
 ```bash
 git clone https://github.com/i1Cps/velocity-hub.git
-uv sync
 ```
 
 ### 🛝 Velocity Mujoco Playground
@@ -81,7 +80,6 @@ uv run train Mjlab-Velocity-Flat-Booster-T1 --env.scene.num-envs 4096 --agent.ru
 Play scripts allow you to interact with your trained policy in the MuJoCo viewer.
 
 ```bash
-uv sync
 uv run play Mjlab-Velocity-Flat-Booster-T1 --checkpoint-file logs/rsl_rl/booster_t1_velocity/model.pt
 uv run play Mjlab-Velocity-Flat-Booster-T1 --wandb-run-path <user>/<project>/<run_id>
 ```
