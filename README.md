@@ -15,14 +15,6 @@
 
 <p align="center"><strong>Velocity Hub</strong> is a small collection of reinforcement learning environments designed to train bipeds and quadrupeds to follow velocity commands</p>
 
-<div align="center">
-  <a href="https://demo.sports-hub.tech" target="_blank">
-    <strong>🚀 Live Demo</strong>
-  </a>
-</div>
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
-
 <p align="center">Two variations to accommodate all users:</p>
 
 <div align="center">
