@@ -94,6 +94,8 @@ uv run play Mjlab-Velocity-Flat-Booster-T1 --checkpoint-file logs/rsl_rl/booster
 [![JAX Badge](https://custom-icon-badges.demolab.com/badge/JAX-black?style=for-the-badge&logo=JAX&logoColor=white)](https://docs.jax.dev/en/latest/quickstart.html)
 [![Nvidia Badge](https://img.shields.io/badge/NVIDIA-76B900?logo=nvidia&logoColor=fff&style=for-the-badge)](https://www.nvidia.com/en-gb/geforce/drivers/)
 
+<p><a href="https://docs.astral.sh/uv/getting-started/installation/">Install UV</a></p>
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
 
 ## Credits
