@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "39279c64584cbd3f287235a6",
+    "documentMicroversion": "5825cdf5308ff6b43f657112",
+    "documentVersion": "0c51471ddc82ffd0f04c306b",
+    "elementId": "fe7dc928de997b821def266c",
+    "fullConfiguration": "default",
+    "id": "MDvfxdyc0AvghHZqa",
+    "isStandardContent": false,
+    "name": "RP2040_zero <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

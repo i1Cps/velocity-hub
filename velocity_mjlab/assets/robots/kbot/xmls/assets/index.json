@@ -1,0 +1,29 @@
+{
+    "files": [
+        "./KC_C_101R_ShldYokeDrive.stl",
+        "./KC_C_202R.stl",
+        "./KC_C_401L_Up_Forearm_Drive.stl",
+        "./KC_C_401R_R_UpForearmDrive.stl",
+        "./KD_B_102B_TORSO_BTM.stl",
+        "./KD_C_101L_ShldYokeDrive.stl",
+        "./KD_C_301L_LowerBicepDrive.stl",
+        "./KD_D_102L_L_Hip_Yoke_Drive.stl",
+        "./KD_D_102R.stl",
+        "./KD_D_301L_L_Femur_Lower_Drive.stl",
+        "./KD_D_301R.stl",
+        "./KD_D_401L_L_Shin_Drive.stl",
+        "./KD_D_401R.stl",
+        "./LFootBushing_GPF_1517_12.collision.stl",
+        "./LFootBushing_GPF_1517_12.stl",
+        "./L_Hip_Roll_RS03.stl",
+        "./L_Hip_Roll_RS03_2.stl",
+        "./PRT0001.stl",
+        "./PRT0001_2.stl",
+        "./RFootBushing_GPF_1517_12.collision.stl",
+        "./RFootBushing_GPF_1517_12.stl",
+        "./RS03_3.stl",
+        "./RS03_4.stl",
+        "./imu.stl",
+        "./index.json"
+    ]
+}

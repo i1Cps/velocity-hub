@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "bf448ab78ca542b2cd943fa4",
+    "documentMicroversion": "db72c5f2549cb5652655811e",
+    "documentVersion": "b4f59c47c350282c68d84326",
+    "elementId": "d7d9bccacbd5bbfb65a1d5dd",
+    "fullConfiguration": "default",
+    "id": "McoduhRhNCoK8AKkt",
+    "isStandardContent": false,
+    "name": "roll_bearing <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

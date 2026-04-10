@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "9645862302385a6c1865522d",
+    "documentMicroversion": "c7daa6eb6964d9d0fb27b9a3",
+    "documentVersion": "aefb20e7d7408a829bd5aabc",
+    "elementId": "7f08684b676e14f0bcf03513",
+    "fullConfiguration": "default",
+    "id": "MODoKUy8+StpUjj5T",
+    "isStandardContent": false,
+    "name": "Jetson_Nano_with_housing <1>",
+    "partId": "LFn2B",
+    "suppressed": false,
+    "type": "Part"
+}

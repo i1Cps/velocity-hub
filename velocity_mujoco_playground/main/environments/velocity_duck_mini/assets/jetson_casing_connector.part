@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "754d8e6976ae56fd4b706a1a",
+    "documentMicroversion": "d9eaf460dc645c1352977386",
+    "documentVersion": "4b19699c9803fadac350c86c",
+    "elementId": "bf08224f08c34239abdd329d",
+    "fullConfiguration": "default",
+    "id": "MTTe7C7PAKGRsfNgL",
+    "isStandardContent": false,
+    "name": "Jetson casing connector <1>",
+    "partId": "JJD",
+    "suppressed": false,
+    "type": "Part"
+}

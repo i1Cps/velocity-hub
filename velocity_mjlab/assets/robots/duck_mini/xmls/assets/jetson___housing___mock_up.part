@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "5d47b6440f55ac5ddf917a66",
+    "documentMicroversion": "d12e79ed8cc03e3c8f5fa5c9",
+    "documentVersion": "f36cb83020e70ac075b87585",
+    "elementId": "2f427ac5ddd467e20818a476",
+    "fullConfiguration": "default",
+    "id": "MAOOdxrKE7BLXNd7L",
+    "isStandardContent": false,
+    "name": "jetson + housing + mock up <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}

@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "30b1650dc4f64b0d53cabc9e",
+    "documentMicroversion": "a638c76ec84f68c25ff93800",
+    "documentVersion": "9293a1924f6816823d64ae37",
+    "elementId": "114f5410c861f80301209a09",
+    "fullConfiguration": "default",
+    "id": "MQG9Zfdp/9mxEbFr3",
+    "isStandardContent": false,
+    "name": "head_pitch_to_yaw <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

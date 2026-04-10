@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "d90a0f10eb77a46c04a74503",
+    "documentMicroversion": "a5c00b2971e0d95658be3165",
+    "documentVersion": "4cf4e2a10e63e6cf0682672e",
+    "elementId": "ac65be3b51fe7512b4fb90d1",
+    "fullConfiguration": "default",
+    "id": "M5LuJzj1S9qHmEzPq",
+    "isStandardContent": false,
+    "name": "Waveshare ESP32 <1>",
+    "partId": "KFnG",
+    "suppressed": false,
+    "type": "Part"
+}

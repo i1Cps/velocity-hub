@@ -1,0 +1,9 @@
+import tasks.velocity.config.anymal_c  # noqa: F401
+import tasks.velocity.config.booster_t1  # noqa: F401
+import tasks.velocity.config.unitree_h1  # noqa: F401
+import tasks.velocity.config.humanoid  # noqa: F401
+import tasks.velocity.config.kbot  # noqa: F401
+import tasks.velocity.config.quadruped  # noqa: F401
+import tasks.velocity.config.spot  # noqa: F401
+import tasks.velocity.config.zbot  # noqa: F401
+import tasks.velocity.config.duck_mini  # noqa: F401

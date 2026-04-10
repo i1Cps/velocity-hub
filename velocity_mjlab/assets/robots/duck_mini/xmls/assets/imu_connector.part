@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "13febd52e3055b8f605d41ea",
+    "documentMicroversion": "a252649f5b816500a1932a64",
+    "documentVersion": "d91d70390242f7160cf531d4",
+    "elementId": "bc8541af8bef2fc32d636457",
+    "fullConfiguration": "default",
+    "id": "MTEdWxQ/rS+CW2Zdv",
+    "isStandardContent": false,
+    "name": "IMU connector <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

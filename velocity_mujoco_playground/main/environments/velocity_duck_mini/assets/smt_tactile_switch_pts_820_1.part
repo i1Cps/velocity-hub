@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "d90a0f10eb77a46c04a74503",
+    "documentMicroversion": "8b28317cecf46a8273ed6f86",
+    "documentVersion": "31180bf7388cfffaae42f705",
+    "elementId": "ac65be3b51fe7512b4fb90d1",
+    "fullConfiguration": "default",
+    "id": "MqnLXKg2d1Y4BbmMn",
+    "isStandardContent": false,
+    "name": "SMT_Tactile_Switch_PTS-820_1 <1>",
+    "partId": "KFnG",
+    "suppressed": false,
+    "type": "Part"
+}

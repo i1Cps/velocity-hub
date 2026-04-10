@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "34ef97514d7ee4240ecc7e33",
+    "documentMicroversion": "05ff9928dd0cac2d614567d2",
+    "documentVersion": "792f4fabd30cef653cf4488d",
+    "elementId": "6b515846dda84e140c76cb25",
+    "fullConfiguration": "default",
+    "id": "MQsRqcKlsR4r0vtDc",
+    "isStandardContent": false,
+    "name": "ESP32 connector <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}

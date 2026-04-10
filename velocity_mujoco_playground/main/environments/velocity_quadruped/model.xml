@@ -1,0 +1,146 @@
+<mujoco model="velocity_quadruped">
+  <option iterations="10" ls_iterations="20" solver="Newton" integrator="implicitfast">
+    <flag eulerdamp="disable"/>
+  </option>
+
+  <statistic center="0 0 0.1" extent="10.0" meansize="0.04"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba force="1 0 0 1" haze="0.15 0.25 0.35 1" fog="0.75 0.75 0.75 1"/>
+    <global azimuth="135" elevation="-25" offwidth="1920" offheight="1080"/>
+    <map force="0.005"/>
+    <scale forcewidth="0.25" contactwidth="0.4" contactheight="0.15" framelength="5.0" framewidth="0.3"/>
+    <quality shadowsize="8192"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.71 0.71 0.71" rgb2="0.71 0.71 0.71" width="800" height="800"/>
+    <texture name="grey_squares" builtin="checker" height="800" width="800" rgb1="0.71 0.71 0.71" rgb2="0.71 0.71 0.71" type="2d" mark="edge" markrgb="1 1 1"/>
+    <material name="floor" reflectance="0.2" texrepeat="1 1" texuniform="true" texture="grey_squares"/>
+    <material name="body" rgba=".7 .5 .3 1" specular="0.9" shininess="0.8"/>
+  </asset>
+
+  <default>
+    <default class="quadruped">
+      <geom type="capsule" material="body" density="5" friction="1 0.5 0.5"/>
+    </default>
+    <default class="visual">
+      <geom group="2" density="0" contype="0" conaffinity="0"/>
+    </default>
+    <joint armature="1" damping="1" limited="true"/>
+  </default>
+
+  <worldbody>
+    <geom name="floor" pos="0 0 0" size="50 50 0.110" friction="1 0.5 0.5" type="plane" material="floor"/>
+
+    <!-- Quadruped -->
+    <body name="quadruped" childclass="quadruped" pos="0 0 0.75">
+      <joint name="quadruped_root" type="free" armature="0" damping="0" limited="false" margin="0.01" pos="0 0 0"/>
+      <light pos="0 0 2" mode="trackcom"/>
+      <camera name="default" mode="trackcom" pos="3.659 -8.426 1.448" xyaxes="0.932 0.363 0.000 -0.075 0.193 0.978"/>
+      <site name="imu" quat="1.0 0.0 0.0 0.0" pos="0.0 0.0 0.0" />
+      <site name="quadruped" size="0.01" pos="0 0 0"/>
+      <geom name="quadruped_torso" pos="0 0 0" size="0.25" type="sphere"/>
+
+      <body name="quadruped_front_left_leg" pos="0 0 0">
+        <geom name="quadruped_front_left_aux" fromto="0.0 0.0 0.0 0.2 0.2 0.0" size="0.08" type="capsule"/>
+        <body name="quadruped_front_left_aux" pos="0.2 0.2 0">
+          <joint name="quadruped_front_left_hip" axis="0 0 1" pos="0.0 0.0 0.0" range="-30 30" type="hinge"/>
+          <geom name="quadruped_front_left_leg" fromto="0.0 0.0 0.0 0.2 0.2 0.0" size="0.08" type="capsule"/>
+          <body name="quadruped_front_left_knee" pos="0.2 0.2 0">
+            <joint name="quadruped_front_left_ankle" axis="-1 1 0" pos="0.0 0.0 0.0" range="30 70" type="hinge"/>
+            <geom name="quadruped_front_left_ankle" fromto="0.0 0.0 0.0 0.4 0.4 0.0" size="0.08" type="capsule"/>
+            <geom name="quadruped_front_left_foot" pos="0.4 0.4 0" size="0.08" type="sphere" mass="0"/>
+            <site name="quadruped_front_left_foot" pos="0.435 0.435 0" size="0.03" type="sphere"/>
+          </body>
+        </body>
+      </body>
+
+      <body name="quadruped_front_right_leg" pos="0 0 0">
+        <geom name="quadruped_front_right_aux" fromto="0.0 0.0 0.0 -0.2 0.2 0.0" size="0.08" type="capsule"/>
+        <body name="quadruped_front_right_aux" pos="-0.2 0.2 0">
+          <joint name="quadruped_front_right_hip" axis="0 0 1" pos="0.0 0.0 0.0" range="-30 30" type="hinge"/>
+          <geom name="quadruped_front_right_leg" fromto="0.0 0.0 0.0 -0.2 0.2 0.0" size="0.08" type="capsule"/>
+          <body name="quadruped_front_right_knee" pos="-0.2 0.2 0">
+            <joint name="quadruped_front_right_ankle" axis="1 1 0" pos="0.0 0.0 0.0" range="-70 -30" type="hinge"/>
+            <geom name="quadruped_front_right_ankle" fromto="0.0 0.0 0.0 -0.4 0.4 0.0" size="0.08" type="capsule"/>
+            <geom name="quadruped_front_right_foot" pos="-0.4 0.4 0" size="0.08" type="sphere" mass="0"/>
+            <site name="quadruped_front_right_foot" pos="-0.435 0.435 0" size="0.03" type="sphere"/>
+          </body>
+        </body>
+      </body>
+
+      <body name="quadruped_back_left_leg" pos="0 0 0">
+        <geom name="quadruped_back_left_aux" fromto="0.0 0.0 0.0 -0.2 -0.2 0.0" size="0.08" type="capsule"/>
+        <body name="quadruped_back_left_aux" pos="-0.2 -0.2 0">
+          <joint name="quadruped_back_left_hip" axis="0 0 1" pos="0.0 0.0 0.0" range="-30 30" type="hinge"/>
+          <geom name="quadruped_back_left_leg" fromto="0.0 0.0 0.0 -0.2 -0.2 0.0" size="0.08" type="capsule"/>
+          <body name="quadruped_back_left_knee" pos="-0.2 -0.2 0">
+            <joint name="quadruped_back_left_ankle" axis="-1 1 0" pos="0.0 0.0 0.0" range="-70 -30" type="hinge"/>
+            <geom name="quadruped_back_left_ankle" fromto="0.0 0.0 0.0 -0.4 -0.4 0.0" size="0.08" type="capsule"/>
+            <geom name="quadruped_back_left_foot" pos="-0.4 -0.4 0" size="0.08" type="sphere" mass="0"/>
+            <site name="quadruped_back_left_foot" pos="-0.435 -0.435 0" size="0.03" type="sphere"/>
+          </body>
+        </body>
+      </body>
+
+      <body name="quadruped_back_right_leg" pos="0 0 0">
+        <geom name="quadruped_back_right_aux" fromto="0.0 0.0 0.0 0.2 -0.2 0.0" size="0.08" type="capsule"/>
+        <body name="quadruped_back_right_aux" pos="0.2 -0.2 0">
+          <joint name="quadruped_back_right_hip" axis="0 0 1" pos="0.0 0.0 0.0" range="-30 30" type="hinge"/>
+          <geom name="quadruped_back_right_leg" fromto="0.0 0.0 0.0 0.2 -0.2 0.0" size="0.08" type="capsule"/>
+          <body name="quadruped_back_right_knee" pos="0.2 -0.2 0">
+            <joint name="quadruped_back_right_ankle" axis="1 1 0" pos="0.0 0.0 0.0" range="30 70" type="hinge"/>
+            <geom name="quadruped_back_right_ankle" fromto="0.0 0.0 0.0 0.4 -0.4 0.0" size="0.08" type="capsule"/>
+            <geom name="quadruped_back_right_foot" pos="0.4 -0.4 0" size="0.08" type="sphere" mass="0"/>
+            <site name="quadruped_back_right_foot" pos="0.435 -0.435 0" size="0.03" type="sphere"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <sensor>
+    <gyro name="gyro" site="imu" noise="0.01" />
+    <accelerometer name="accelerometer" site="imu" noise="0.01" />
+    <velocimeter name="local_linvel" site="imu" />
+
+    <frameangvel name="global_angvel" objtype="site" objname="imu" />
+    <framelinvel name="global_linvel" objtype="site" objname="imu" />
+    <framezaxis name="gravity" objtype="site" objname="imu"/>
+
+    <framepos name="front_left_foot_pos" objtype="site" objname="quadruped_front_left_foot"/>
+    <framepos name="front_right_foot_pos" objtype="site" objname="quadruped_front_right_foot"/>
+    <framepos name="back_left_foot_pos" objtype="site" objname="quadruped_back_left_foot"/>
+    <framepos name="back_right_foot_pos" objtype="site" objname="quadruped_back_right_foot"/>
+
+    <framelinvel name="front_left_foot_linvel" objtype="site" objname="quadruped_front_left_foot"/>
+    <framelinvel name="front_right_foot_linvel" objtype="site" objname="quadruped_front_right_foot"/>
+    <framelinvel name="back_left_foot_linvel" objtype="site" objname="quadruped_back_left_foot"/>
+    <framelinvel name="back_right_foot_linvel" objtype="site" objname="quadruped_back_right_foot"/>
+
+    <contact name="front_left_foot_floor_contact" geom1="quadruped_front_left_foot" geom2="floor" reduce="mindist" num="1" data="found"/>
+    <contact name="front_right_foot_floor_contact" geom1="quadruped_front_right_foot" geom2="floor" reduce="mindist" num="1" data="found"/>
+    <contact name="back_left_foot_floor_contact" geom1="quadruped_back_left_foot" geom2="floor" reduce="mindist" num="1" data="found"/>
+    <contact name="back_right_foot_floor_contact" geom1="quadruped_back_right_foot" geom2="floor" reduce="mindist" num="1" data="found"/>
+
+    <subtreeangmom name="root_angmom" body="quadruped"/>
+  </sensor>
+
+  <!-- Quadruped has 8 Actuators -->
+  <actuator>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_front_left_hip" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_front_left_ankle" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_front_right_hip" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_front_right_ankle" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_back_left_hip" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_back_left_ankle" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_back_right_hip" gear="150"/>
+    <motor ctrllimited="true" ctrlrange="-1.0 1.0" joint="quadruped_back_right_ankle" gear="150"/>
+  </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0.0 0.55 1.0 0.0 0.0 0.0 0.0 1.0 0.0 -1.0 0.0 -1.0 0.0 1.0"/>
+  </keyframe>
+</mujoco>

@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "bb9b8c75e646d9d767a1152b",
+    "documentMicroversion": "cf7a3f69064506abc71e85a6",
+    "documentVersion": "3facd79625115a4b281bbb32",
+    "elementId": "225cd21b79a548272708ede6",
+    "fullConfiguration": "default",
+    "id": "M7ogY0DHvxtY5CO3W",
+    "isStandardContent": false,
+    "name": "rp2040_connector <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

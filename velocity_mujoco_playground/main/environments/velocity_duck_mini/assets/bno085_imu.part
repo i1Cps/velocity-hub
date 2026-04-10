@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "41cd201e8c5001da45c34115",
+    "documentMicroversion": "e000047dd8871189dd212715",
+    "documentVersion": "0c164ae2f6fc03b46c920b16",
+    "elementId": "3545981c51bf19737ebec1bc",
+    "fullConfiguration": "default",
+    "id": "Mo1e1TsYJ0Ho9K98J",
+    "isStandardContent": false,
+    "name": "BNO085 IMU <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}
