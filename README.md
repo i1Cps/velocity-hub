@@ -74,6 +74,7 @@ uv run play --env=zbot
 
 ```bash
 cd ~/velocity-hub/velocity_mjlab
+uv sync --project velocity_mjlab --reinstall-package velocity-mjlab
 uv run train Mjlab-Velocity-Flat-Booster-T1 --env.scene.num-envs 4096 --agent.run-name booster_t1_velocity
 ```
 
