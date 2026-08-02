@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training artifacts (checkpoints live on wandb)
+/logs/
+velocity_mjlab/logs/**
+wandb/
+*.pt
+*.onnx
+!velocity_mjlab/logs/rsl_rl/
+!velocity_mjlab/logs/rsl_rl/*/
+!velocity_mjlab/logs/rsl_rl/*/model.pt
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.codex/
+
+# UV / pip
+*.lock
+pip-log.txt
+**/.python-version
+
+# Videos
+videos/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MuJoCo transient dump
+**/MUJOCO_LOG.TXT
+**/MJMODEL.TXT
+velocity_mjlab/mjmodel.xml

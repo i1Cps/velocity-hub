@@ -1,1 +1,0 @@
-"""Boston Dynamics Spot Quadruped"""

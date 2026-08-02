@@ -2,11 +2,11 @@
   <h1>Velocity Hub</h1>
 </div>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 <div align="center">
   <a href="https://velocity-hub.tech/" target="_blank">
-    <img src="./media/collage.png" width="500">
+    <img src="./media/collage.png" width="500" alt="Velocity Hub robot collection">
   </a>
 </div>
 
@@ -16,7 +16,7 @@
   </a>
 </div>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 <p align="center"><strong>Velocity Hub</strong> is a small collection of reinforcement learning environments designed to train bipeds and quadrupeds to follow velocity commands</p>
 
@@ -25,13 +25,13 @@
 <div align="center">
 <table>
 <tr>
-<td align="center"><a href="/velocity_mjlab">🪛 velocity_mjlab</a></td>
-<td align="center"><a href="/velocity_mujoco_playground">🛝 velocity_mujoco_playground</a></td>
+<td align="center"><a href="./velocity_mjlab/">🪛 velocity_mjlab</a></td>
+<td align="center"><a href="./velocity_mujoco_playground/">🛝 velocity_mujoco_playground</a></td>
 </tr>
 </table>
 </div>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 <h2 align="center">Supported Robots</h2>
 
@@ -39,17 +39,19 @@
 
 | Robot | Type | Actuator | Actuator Type | DOF |
 |-------|------|----------|---------------|-----|
-| Duck Mini | Biped | STS3215 | Servo | 14 |
+| Duck Mini Pro Headless | Biped | ST3025 | Servo | 10 |
 | KScale Zbot | Humanoid | STS3215 | Servo | 18 |
 | KScale KBot | Humanoid | RobStride | QDD | 20 |
 | Booster T1 | Humanoid | Proprietary | QDD | 23 |
 | Unitree H1 | Humanoid | M107 | QDD | 19 |
+| Humanoid | Humanoid | MuJoCo | Position | 17 |
 | ANYmal C | Quadruped | ANYdrive 3.0 | SEA | 12 |
 | Boston Dynamics Spot | Quadruped | Proprietary | QDD | 12 |
+| Quadruped | Quadruped | MuJoCo | Position | 8 |
 
 </div>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 ## ⚡ Quickstart
 
@@ -57,10 +59,10 @@
 git clone https://github.com/i1Cps/velocity-hub.git
 ```
 
-### 🛝 Velocity Mujoco Playground
+### 🛝 Velocity MuJoCo Playground
 
 ```bash
-cd ~/velocity-hub/velocity_mujoco_playground
+cd velocity-hub/velocity_mujoco_playground
 uv run train --env=zbot
 ```
 
@@ -70,11 +72,11 @@ Play scripts allow you to interact with your trained policy in the MuJoCo viewer
 uv run play --env=zbot
 ```
 
-### 🪛 Velocity MjLab
+### 🪛 Velocity MJLab
 
 ```bash
-cd ~/velocity-hub/velocity_mjlab
-uv sync --project velocity_mjlab --reinstall-package velocity-mjlab
+cd velocity-hub/velocity_mjlab
+uv sync --reinstall-package velocity-mjlab
 uv run train Mjlab-Velocity-Flat-Booster-T1 --env.scene.num-envs 4096 --agent.run-name booster_t1_velocity
 ```
 
@@ -85,7 +87,7 @@ uv run play Mjlab-Velocity-Flat-Booster-T1 --checkpoint-file logs/rsl_rl/booster
 uv run play Mjlab-Velocity-Flat-Booster-T1 --wandb-run-path <user>/<project>/<run_id>
 ```
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 ## Dependencies
 
@@ -95,14 +97,14 @@ uv run play Mjlab-Velocity-Flat-Booster-T1 --wandb-run-path <user>/<project>/<ru
 
 <p><a href="https://docs.astral.sh/uv/getting-started/installation/">Install UV</a></p>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)](#table-of-contents)
+![Divider](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 ## Credits
 
 Developed by [**Theo Moore-Calters**](https://www.linkedin.com/in/theo-moore-calters/)
 
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/i1Cps)
-[![LinkedIn Badge](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin_logo_working&logoColor=0000)](https://linkedin.com/in/theo-moore-calters)
+[![LinkedIn Badge](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin_logo_working&logoColor=0000)](https://www.linkedin.com/in/theo-moore-calters/)
 
 ## License
 

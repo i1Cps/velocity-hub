@@ -31,8 +31,8 @@ print(f"JAX using GPU: {gpu.device_kind} (platform={gpu.platform}, id={gpu.id})"
 # Command Line Arguments:
 _ENV_NAME = flags.DEFINE_string(
     "env",
-    "duck_mini",
-    f"Name of the environment. One of {', '.join(registry.ALL_ENVS)}",
+    "zbot",
+    f"Name of the environment. One of {', '.join(registry_init.PLAY_ENV_REGISTRY)}",
 )
 _NUM_TIMESTEPS = flags.DEFINE_integer("num_timesteps", 10_000_000, "Number of timesteps")
 _LOG_METRICS   = flags.DEFINE_bool("metrics", True, "Detailed log of metrics per eval")

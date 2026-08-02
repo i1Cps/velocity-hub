@@ -1,1 +1,0 @@
-"""KScale Kbot humanoid"""

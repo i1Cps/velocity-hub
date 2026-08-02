@@ -1,14 +1,14 @@
 <h1 align="center">🛝 Velocity MuJoCo Playground</h1>
 
-<p align="center">The MuJoCo Playground side of Velocity Hub is built for fast RL research. Train bipeds and quadrupeds to follow velocity commands in minutes with simple reward shaping, and clear robot specific observation design without long feedback loops.</p>
+<p align="center">The MuJoCo Playground side of Velocity Hub is built for fast RL research. Train bipeds and quadrupeds to follow velocity commands in minutes with simple reward shaping and clear robot-specific observation design without long feedback loops.</p>
 
 ## Environments
 
 <div align="center">
 
-| anymal_c | duck_mini | h1 | humanoid |
-| --- | --- | --- | --- |
-| <img src="../media/anymal_c_square.png" width="100"/> | <img src="../media/duck_mini_square.png" width="100"/> | <img src="../media/h1_square.png" width="100"/> | <img src="../media/humanoid_square.png" width="100"/> |
+| anymal_c | h1 | humanoid |
+| --- | --- | --- |
+| <img src="../media/anymal_c_square.png" width="100"/> | <img src="../media/h1_square.png" width="100"/> | <img src="../media/humanoid_square.png" width="100"/> |
 
 | kbot | quadruped | spot | t1 | zbot |
 | --- | --- | --- | --- | --- |
@@ -19,9 +19,6 @@
 ## Training Command Examples
 
 ```bash
-uv run train --env=duck_mini
-```
-```bash
 uv run train --env=h1
 ```
 ```bash
@@ -31,7 +28,7 @@ uv run train --env=kbot
 uv run train --env=spot
 ```
 
-Trained models are saved to `models/velocity_<env>/model`. If wandb is configured on your system, runs are automatically logged to your account.
+Trained models are saved to `models/velocity_<env>/model`. If Weights & Biases is configured on your system, runs are automatically logged to your account.
 
 ## Running a Policy
 

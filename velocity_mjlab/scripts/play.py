@@ -1,9 +1,9 @@
 """Play velocity-mjlab tasks with keyboard velocity control.
 
 Keyboard bindings:
-  UP / DOWN       lin_vel_x  +/- 0.2
-  J / L           lin_vel_y  +/- 0.2
-  LEFT / RIGHT    ang_vel_z  +/- 0.2
+  UP / DOWN       adjust lin_vel_x
+  J / L           adjust lin_vel_y
+  LEFT / RIGHT    adjust ang_vel_z
   K               zero all commands
   ENTER           reset environment (also zeros commands)
 """
@@ -21,31 +21,34 @@ from mjlab.viewer.native.keys import (
 )
 
 STEP = 0.2
+ZBOT_STEP = 0.1
+DUCK_MINI_PRO_STEP = 0.05
 
 
 class VelocityKeyboardViewer(NativeMujocoViewer):
     """NativeMujocoViewer with arrow-key velocity command control."""
 
-    def __init__(self, env, policy, **kwargs):
+    def __init__(self, env, policy, command_step=STEP, **kwargs):
         super().__init__(env, policy, **kwargs)
         # [lin_vel_x, lin_vel_y, ang_vel_z]
         self._kb_cmd = [0.0, 0.0, 0.0]
+        self._command_step = command_step
         self._kb_active = True
         self.user_key_callback = self._velocity_key_callback
 
     def _velocity_key_callback(self, key: int) -> None:
         if key == KEY_UP:
-            self._kb_cmd[0] += STEP
+            self._kb_cmd[0] += self._command_step
         elif key == KEY_DOWN:
-            self._kb_cmd[0] -= STEP
+            self._kb_cmd[0] -= self._command_step
         elif key == KEY_J:
-            self._kb_cmd[1] += STEP
+            self._kb_cmd[1] += self._command_step
         elif key == KEY_L:
-            self._kb_cmd[1] -= STEP
+            self._kb_cmd[1] -= self._command_step
         elif key == KEY_LEFT:
-            self._kb_cmd[2] += STEP
+            self._kb_cmd[2] += self._command_step
         elif key == KEY_RIGHT:
-            self._kb_cmd[2] -= STEP
+            self._kb_cmd[2] -= self._command_step
         elif key == KEY_K:
             self._kb_cmd[:] = [0.0, 0.0, 0.0]
         else:
@@ -116,10 +119,18 @@ def main():
 
     device = args.device or ("cuda:0" if torch.cuda.is_available() else "cpu")
     env_cfg = load_env_cfg(chosen_task, play=True)
+    env_cfg.events.pop("push_robot", None)
     agent_cfg = load_rl_cfg(chosen_task)
 
     if args.num_envs is not None:
         env_cfg.scene.num_envs = args.num_envs
+
+    if "Duck-Mini-Pro" in chosen_task:
+        command_step = DUCK_MINI_PRO_STEP
+    elif chosen_task.endswith("Zbot"):
+        command_step = ZBOT_STEP
+    else:
+        command_step = STEP
 
     env = ManagerBasedRlEnv(cfg=env_cfg, device=device)
     env = RslRlVecEnvWrapper(env, clip_actions=agent_cfg.clip_actions)
@@ -153,14 +164,14 @@ def main():
         policy = runner.get_inference_policy(device=device)
 
     print("\n--- Keyboard Velocity Control ---")
-    print("  UP/DOWN      lin_vel_x  +/- 0.2")
-    print("  J/L          lin_vel_y  +/- 0.2")
-    print("  LEFT/RIGHT   ang_vel_z  +/- 0.2")
+    print(f"  UP/DOWN      lin_vel_x  +/- {command_step}")
+    print(f"  J/L          lin_vel_y  +/- {command_step}")
+    print(f"  LEFT/RIGHT   ang_vel_z  +/- {command_step}")
     print("  K            zero commands")
     print("  ENTER        reset env + commands")
     print("---------------------------------\n")
 
-    VelocityKeyboardViewer(env, policy).run()
+    VelocityKeyboardViewer(env, policy, command_step=command_step).run()
     env.close()
 
 
